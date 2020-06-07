@@ -48,11 +48,10 @@ def nyc_pigeon_organizer(data)
   #but need to add the name-specific values to each array
   
   data.map{|outer_key,outer_value| 
-    if outer_key == :color
-      outer_value.map{|color_key,color_value|
+      outer_value.map{|inner_key,inner_value|
           count = 0
-          while count < color_value.length do
-            pigeon_list[color_value[count]][:color].push(color_key.to_s)
+          while count < inner_value.length do
+            pigeon_list[inner_value[count]][outer_key].push(color_key.to_s)
             count+=1
           end
         
