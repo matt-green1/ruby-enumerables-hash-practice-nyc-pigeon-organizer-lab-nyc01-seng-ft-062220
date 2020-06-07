@@ -51,7 +51,7 @@ def nyc_pigeon_organizer(data)
       outer_value.map{|inner_key,inner_value|
           count = 0
           while count < inner_value.length do
-            pigeon_list[inner_value[count]][outer_key].push(color_key.to_s)
+            pigeon_list[inner_value[count]][outer_key].push(outer_key.to_s)
             count+=1
           end
         
